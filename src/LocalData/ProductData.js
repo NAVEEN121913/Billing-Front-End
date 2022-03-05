@@ -1,5 +1,6 @@
 const productList = [
   {
+    ProductID: '0989',
     _id: '6211d946cea82249ec15af5d',
     userId: '61ffe8d57568eebebce2046d',
     productName: 'Falcon 9',
@@ -9,9 +10,10 @@ const productList = [
     productUnit: 'Rocket',
     status: 'bil',
     state: 'avl',
+    brand: 'Spece X',
     __v: 0,
   },
-  {
+  /* {
     _id: '6211da1d0c47c1a9a1f2bc32',
     userId: '61ffe8d57568eebebce2046d',
     productName: 'Tesla Car',
@@ -22,7 +24,7 @@ const productList = [
     status: 'bil',
     state: 'avl',
     __v: 0,
-  },
+  }, */
 ];
 
 export {productList};
