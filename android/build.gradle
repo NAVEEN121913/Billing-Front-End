@@ -18,6 +18,18 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+subprojects {
+  project.configurations.all {
+      afterEvaluate {project ->
+        if (project.hasProperty("android")) {
+            android {
+                compileSdkVersion 30
+                buildToolsVersion '30'
+            }
+        }
+    }
+  }
+}
 
 allprojects {
     repositories {
