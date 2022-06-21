@@ -4,19 +4,21 @@
 import {useNavigation} from '@react-navigation/native';
 import {Formik} from 'formik';
 import React, {useState} from 'react';
+import {useDispatch} from 'react-redux';
 import LoginComponent from '../Component/LoginComponent';
-import {loginUser} from '../Services';
+import {loginSuccess, requestLogin} from '../Redux/User/Action';
 import {LoginValidator} from '../Validation/LoginValidation';
 
 const LoginContainer = () => {
   const navigation = useNavigation();
+  const dispatch = useDispatch();
   const onLogin = async values => {
     console.log('On Login', values);
     const payload = {
       email: values.email,
       password: values.password,
     };
-    const response = await loginUser(payload);
+    dispatch(requestLogin(payload));
     console.log('container>>>>>', response);
   };
   return (
