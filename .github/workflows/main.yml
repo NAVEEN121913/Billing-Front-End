@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: npm
+        run: yarn
 
       - name: Build Android Release
         run: cd android && gradlew assembleRelease
